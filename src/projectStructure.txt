@@ -1,0 +1,32 @@
+TOP LEVEL FILES
+next.config.js - configuration file for Next js
+middleware.ts - Next.js request middleware
+instrumentation.ts - OpenTelemetry and instrumentation
+.env - environment variables
+.env.local - Local environment variables
+.env.production - production environment variables
+.env.development - development environment variables
+.next-env.d.ts - TypeScript declaration file for Next.js
+
+ECOSYSTEM
+package.json - Project dependencies and scripts
+.gitignore 
+jsconfig.json - configuration file for javascript
+.eslintre.json - configuration file for eslintre
+
+Top-level folders
+app - App Router
+pages - Pages Router
+public - Static assets to be served
+src - optional application source folder
+
+ROUTING FILES
+layout  
+page
+loading
+not-found
+error
+global-error  - global error UI
+Router - API endpoint
+template - Re-rendered layout
+default - Parallel route fallback page
