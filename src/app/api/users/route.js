@@ -1,5 +1,7 @@
+import { connectdb } from "@/helper/db";
 import { NextResponse } from "next/server";
 
+connectdb();
 export function GET(){
     const users=[{
         name:'Sahil',
@@ -14,8 +16,27 @@ export function GET(){
     return NextResponse.json(users);
 }
 
-export function POST(){
+export async function POST(request){
 
+    const body=request.body;
+    console.log(body);
+    // console.log(request.method);
+    // console.log(request.cookies);
+    // // console.log(request.headers);
+    // console.log(request.nextUrl.pathname);
+    // console.log(request.nextUrl.searchParams);
+
+    //requesting json data from user
+    const jsonData=await request.json()
+
+    //request data in form of text
+    // const textData=await request.text();
+    // console.log(textData);
+
+    console.log(jsonData);
+    return NextResponse.json({
+        "message": "posting user data",
+    })
 }
 
 export function PUT(){
